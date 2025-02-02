@@ -5,7 +5,7 @@ function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar el menú móvil
 
   return (
-    <div className="sticky top-0 w-full bg-blue-500 p-4 shadow-md">
+    <div className="sticky top-0 w-full bg-blue-500 p-4 shadow-md z-10">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <h1 className="text-3xl font-bold text-center text-white">LOGO</h1>
