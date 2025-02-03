@@ -83,9 +83,11 @@ function About() {
             {text[language].desc}
           </p>
           <br />
-          <button className="bg-white text-blue-900 font-semibold cursor-pointer hover:bg-gray-200 rounded-2xl px-4 py-2 transition-all duration-300 shadow-md">
-            {text[language].button_cv}
-          </button>
+          <a href={language === "es" ? "/David_Orozco_cv_es.pdf" : "/David_Orozco_cv_en.pdf"} download="David_Orozco_cv.pdf">
+            <button className="bg-white text-blue-900 font-semibold cursor-pointer hover:bg-gray-200 rounded-2xl px-4 py-2 transition-all duration-300 shadow-md">
+              {text[language].button_cv}
+            </button>
+          </a>
         </div>
       </section>
     </div>
