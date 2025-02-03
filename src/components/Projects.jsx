@@ -80,7 +80,7 @@ function Projects() {
   return (
     <div className="bg-white text-black p-8 md:p-20">
       <h2 className="text-4xl text-center font-bold text-blue-800 mb-8">
-        Projects
+        {text[language].title}
       </h2>
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => {
