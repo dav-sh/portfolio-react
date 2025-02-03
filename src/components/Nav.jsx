@@ -1,8 +1,19 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import { useLanguage } from "../context/Language";
 function Nav() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar el menú móvil
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
+
+  const text = {
+    en: {
+      nav: ["About", "Projects", "Contact", "CV"],
+    },
+    es: {
+      nav: ["Acerca", "Proyectos", "Contacto", "CV"],
+    },
+  };
 
   return (
     <div className="sticky top-0 w-full bg-blue-500 p-4 shadow-md z-10">
@@ -11,19 +22,26 @@ function Nav() {
         <h1 className="text-3xl font-bold text-center text-white">LOGO</h1>
 
         {/* Navigation - Desktop */}
-        <ul className="hidden md:flex space-x-20 text-2xl">
-          <li className="text-white hover:text-amber-300">
-            <a href="#">About</a>
-          </li>
-          <li className="text-white hover:text-amber-300">
-            <a href="#">Projects</a>
-          </li>
-          <li className="text-white hover:text-amber-300">
-            <a href="#">Contact</a>
-          </li>
-          <li className="text-white hover:text-amber-300">
-            <a href="#">CV</a>
-          </li>
+        <ul className="hidden md:flex space-x-15 text-2xl">
+          {console.log({ language })}
+          {text[language].nav.map((item, index) => (
+            <li key={index} className="text-white hover:text-amber-300">
+              <a href="#">{item}</a>
+            </li>
+          ))}
+
+          <label className="inline-flex items-center cursor-pointer">
+            <input
+              type="checkbox"
+              value=""
+              className="sr-only peer"
+              onChange={toggleLanguage}
+            />
+            <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
+            <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+              ES / EN
+            </span>
+          </label>
         </ul>
 
         {/* Mobile Menu Icon */}
@@ -42,18 +60,27 @@ function Nav() {
       {isMenuOpen && (
         <div className="md:hidden p-4">
           <ul className=" text-white text-center text-xl">
-            <li className="hover:text-amber-300 active:bg-blue-400 p-4  rounded-lg">
-              <a href="#">About</a>
-            </li>
-            <li className="hover:text-amber-300 active:bg-blue-400 p-4 rounded-lg">
-              <a href="#">Projects</a>
-            </li>
-            <li className="hover:text-amber-300 active:bg-blue-400 p-4 rounded-lg">
-              <a href="#">Contact</a>
-            </li>
-            <li className="hover:text-amber-300 active:bg-blue-400 p-4 rounded-lg">
-              <a href="#">CV</a>
-            </li>
+            {text[language].nav.map((value, index) => (
+              <li
+                key={index}
+                className="hover:text-amber-300 active:bg-blue-400 p-4  rounded-lg"
+              >
+                <a href="#">{value}</a>
+              </li>
+            ))}
+
+            <label className="py-4 inline-flex items-center cursor-pointer">
+              <input
+                type="checkbox"
+                value=""
+                className="sr-only peer"
+                onChange={toggleLanguage}
+              />
+              <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
+              <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+                ES / EN
+              </span>
+            </label>
           </ul>
         </div>
       )}
