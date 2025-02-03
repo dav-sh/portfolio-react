@@ -8,10 +8,10 @@ function Nav() {
 
   const text = {
     en: {
-      nav: ["About", "Projects", "Contact", "CV"],
+      nav: ["About", "Projects", "Stack", "Contact",],
     },
     es: {
-      nav: ["Acerca", "Proyectos", "Contacto", "CV"],
+      nav: ["Acerca", "Proyectos", "Tecnologías ", "Contacto",],
     },
   };
 
@@ -22,7 +22,7 @@ function Nav() {
         <h1 className="text-3xl font-bold text-center text-white">LOGO</h1>
 
         {/* Navigation - Desktop */}
-        <ul className="hidden md:flex space-x-15 text-2xl">
+        <ul className={`hidden md:flex  ${language === "es" ? "space-x-8" : "space-x-15"} text-2xl`}>
           {console.log({ language })}
           {text[language].nav.map((item, index) => (
             <li key={index} className="text-white hover:text-amber-300">
