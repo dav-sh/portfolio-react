@@ -7,35 +7,42 @@ import {
   FaHtml5,
   FaCss3,
   FaDatabase,
-  FaGithub ,
+  FaGithub,
+  FaReact,
 } from "react-icons/fa";
-import { SiSpringboot, SiMysql } from "react-icons/si";
+import { SiSpringboot, SiMysql, SiPostman } from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
+import { RiTailwindCssFill } from "react-icons/ri";
 import { useLanguage } from "../context/Language";
 
 function Technologies() {
-  const {language} = useLanguage()
+  const { language } = useLanguage();
   const technologies = [
     { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
     { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
+    { name: "React", icon: <FaReact className="text-blue-400" /> },
+    { name: "Tailwind", icon: <RiTailwindCssFill className="text-blue-400" /> },
     { name: "Java", icon: <FaJava className="text-red-500" /> },
     { name: "Spring Boot", icon: <SiSpringboot className="text-green-700" /> },
+    { name: "Postman", icon: <SiPostman className="text-amber-500" /> },
     { name: "Python", icon: <FaPython className="text-blue-400" /> },
     { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
     { name: "CSS", icon: <FaCss3 className="text-blue-600" /> },
     { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
     { name: "SQL Server", icon: <DiMsqlServer className="text-red-700" /> },
-    { name: "Github", icon: <FaGithub  className="text-black" /> },
+    { name: "Github", icon: <FaGithub className="text-black" /> },
+    
+     
   ];
 
   const text = {
-    en:{
+    en: {
       title: "Technologies I Know",
     },
-    es:{
+    es: {
       title: "Tecnologías que Conozco",
-    }
-  }
+    },
+  };
 
   return (
     <section className="bg-gradient-to-l from-blue-600 to-blue-900 text-white p-8 md:p-20 ">
