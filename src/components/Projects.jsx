@@ -91,6 +91,7 @@ function Projects() {
               img={project.img}
               title={project.title[language]}
               desc={project.desc[language]}
+              link={project.link}
             />
           );
         })}
