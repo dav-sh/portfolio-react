@@ -17,7 +17,7 @@ function Nav() {
   };
 
   return (
-    <div className="sticky top-0 w-full bg-blue-500 p-4 shadow-md z-10">
+    <navbar className="sticky top-0 w-full bg-gradient-to-r from-blue-600 to-blue-800 backdrop-blur-md p-4 shadow-md z-10">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         {/* <h1 className="text-3xl font-bold text-center text-white">LOGO</h1> */}
@@ -76,6 +76,7 @@ function Nav() {
 
               const handleClick = () => {
                 window.location.href = href;
+                setIsMenuOpen(false);
               };
 
               return (
@@ -105,7 +106,7 @@ function Nav() {
           </ul>
         </div>
       )}
-    </div>
+    </navbar>
   );
 }
 

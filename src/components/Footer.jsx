@@ -18,7 +18,7 @@ const Footer = () => {
   };
 
     return (
-      <footer className="bg-blue-900 text-white py-6 text-center">
+      <footer className="bg-gradient-to-r from-blue-600 to-blue-900 text-white py-6 text-center">
         <div className="container mx-auto px-4">
           <p className="text-sm">&copy; {new Date().getFullYear()} {text[language].message}</p>
           <div className="flex justify-center space-x-6 mt-3">
