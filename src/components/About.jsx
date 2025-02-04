@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useLanguage } from "../context/Language";
-import {socialMedia} from '../constants/data'
+import {socialMedia} from '../data/socialLinks'
 function About() {
   const { language } = useLanguage();
 

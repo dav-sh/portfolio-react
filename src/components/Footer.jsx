@@ -1,4 +1,4 @@
-import { socialMedia } from "../constants/data";
+import { socialMedia } from "../data/socialLinks";
 import { useLanguage } from "../context/Language";
 
 
