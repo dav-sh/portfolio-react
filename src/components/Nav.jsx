@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { useLanguage } from "../context/Language";
+import logo from '../assets/img/logo.png'
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, toggleLanguage } = useLanguage();
@@ -19,7 +20,8 @@ function Nav() {
     <div className="sticky top-0 w-full bg-blue-500 p-4 shadow-md z-10">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-3xl font-bold text-center text-white">LOGO</h1>
+        {/* <h1 className="text-3xl font-bold text-center text-white">LOGO</h1> */}
+        <img src={logo} alt="LOGO" className="h-10" />
 
         {/* Navigation - Desktop */}
         <ul className={`hidden md:flex  ${language === "es" ? "space-x-8" : "space-x-15"} text-2xl`}>
