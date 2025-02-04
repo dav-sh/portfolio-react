@@ -17,7 +17,7 @@ function Nav() {
   };
 
   return (
-    <navbar className="sticky top-0 w-full bg-gradient-to-r from-blue-600 to-blue-800 backdrop-blur-md p-4 shadow-md z-10">
+    <nav className="sticky top-0 w-full bg-gradient-to-r from-blue-600 to-blue-800 backdrop-blur-md p-4 shadow-md z-10">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         {/* <h1 className="text-3xl font-bold text-center text-white">LOGO</h1> */}
@@ -106,7 +106,7 @@ function Nav() {
           </ul>
         </div>
       )}
-    </navbar>
+    </nav>
   );
 }
 

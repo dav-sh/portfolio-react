@@ -105,7 +105,7 @@ function Contact() {
           </div>
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white py-3 rounded-lg hover:opacity-90 transition duration-200 shadow-md"
+            className="w-full cursor-pointer bg-gradient-to-r from-blue-600 to-blue-800 text-white py-3 rounded-lg hover:opacity-90 transition duration-200 shadow-md"
           >
             {text[language].button_send}
           </button>
