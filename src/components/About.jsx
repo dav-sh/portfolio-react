@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useLanguage } from "../context/Language";
-
+import {socialMedia} from '../constants/data'
 function About() {
   const { language } = useLanguage();
 
@@ -41,7 +41,7 @@ function About() {
         <ul className="flex flex-row justify-center gap-4 text-2xl">
           <li>
             <a
-              href="https://github.com/tu-usuario"
+              href={socialMedia.github}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-300 transition-transform duration-300 hover:scale-110"
@@ -51,7 +51,7 @@ function About() {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/tu-usuario"
+              href={socialMedia.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-300 transition-transform duration-300 hover:scale-110"
@@ -61,7 +61,7 @@ function About() {
           </li>
           <li>
             <a
-              href="mailto:tu-correo@example.com"
+              href={`mailto:${socialMedia.email}`}
               className="hover:text-gray-300 transition-transform duration-300 hover:scale-110"
             >
               <FaEnvelope />
