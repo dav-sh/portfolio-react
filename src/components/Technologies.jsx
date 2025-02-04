@@ -45,7 +45,7 @@ function Technologies() {
   };
 
   return (
-    <section className="bg-gradient-to-l from-blue-600 to-blue-900 text-white p-8 md:p-20 ">
+    <section id='stack' className="scroll-mt-18 bg-gradient-to-l from-blue-600 to-blue-900 text-white p-8 md:p-20 ">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6">{text[language].title}</h2>
         <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 justify-items-center">

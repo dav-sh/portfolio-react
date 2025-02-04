@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { useLanguage } from "../context/Language";
-import logo from '../assets/img/logo.png'
+import logo from "../assets/img/logo.png";
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, toggleLanguage } = useLanguage();
 
   const text = {
     en: {
-      nav: ["About", "Projects", "Stack", "Contact",],
+      nav: ["About", "Projects", "Stack", "Contact"],
     },
     es: {
-      nav: ["Acerca", "Proyectos", "Tecnologías ", "Contacto",],
+      nav: ["Acerca", "Proyectos", "Tecnologías ", "Contacto"],
     },
   };
 
@@ -24,11 +24,20 @@ function Nav() {
         <img src={logo} alt="LOGO" className="h-10" />
 
         {/* Navigation - Desktop */}
-        <ul className={`hidden md:flex  ${language === "es" ? "space-x-8" : "space-x-15"} text-2xl`}>
+        <ul
+          className={`hidden md:flex  ${
+            language === "es" ? "space-x-8" : "space-x-15"
+          } text-2xl`}
+        >
           {console.log({ language })}
           {text[language].nav.map((item, index) => (
             <li key={index} className="text-white hover:text-amber-300">
-              <a href="#">{item}</a>
+              {/* {console.log(text.en.nav[index])} */}
+              <a onClick={ () =>console.log('smooth')}
+                href={`#${text.en.nav[index].toLowerCase()}`}
+              >
+                {item}
+              </a>
             </li>
           ))}
 
@@ -62,14 +71,24 @@ function Nav() {
       {isMenuOpen && (
         <div className="md:hidden p-4">
           <ul className=" text-white text-center text-xl">
-            {text[language].nav.map((value, index) => (
-              <li
-                key={index}
-                className="hover:text-amber-300 active:bg-blue-400 p-4  rounded-lg"
-              >
-                <a href="#">{value}</a>
-              </li>
-            ))}
+            {text[language].nav.map((value, index) => {
+              const href = `#${text.en.nav[index].toLowerCase()}`;
+
+              const handleClick = () => {
+                window.location.href = href;
+              };
+
+              return (
+                <li
+                  key={index}
+                  className="hover:text-amber-300 active:bg-blue-400 p-4 rounded-lg"
+                  onClick={handleClick}
+                >
+                
+                <a href={href} >{value}</a>
+                </li>
+              );
+            })}
 
             <label className="py-4 inline-flex items-center cursor-pointer">
               <input

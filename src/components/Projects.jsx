@@ -78,7 +78,7 @@ function Projects() {
   ];
 
   return (
-    <div className="bg-white text-black p-8 md:p-20">
+    <div id='projects' className="scroll-mt-18 bg-white text-black p-8 md:p-20">
       <h2 className="text-4xl text-center font-bold text-blue-800 mb-8">
         {text[language].title}
       </h2>

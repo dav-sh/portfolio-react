@@ -52,7 +52,7 @@ function Contact() {
   };
 
   return (
-    <section className="bg-white text-gray-900 py-12">
+    <section id='contact' className="scroll-mt-18 bg-white text-gray-900 py-12">
       <div className="container mx-auto max-w-lg p-8 bg-white rounded-xl shadow-xl border border-blue-300">
         <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
           {text[language].title}

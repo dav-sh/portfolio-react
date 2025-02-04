@@ -25,7 +25,10 @@ function About() {
   };
 
   return (
-    <div className="md:h-screen m-auto p-4 md:p-6 bg-gradient-to-r from-blue-600 to-blue-900 text-white grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
+    <div
+      id="about"
+      className="md:h-screen m-auto p-4 md:p-6 bg-gradient-to-r from-blue-600 to-blue-900 text-white grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center  scroll-mt-18"
+    >
       {/* Sección de la imagen y enlaces */}
       <div className="grid gap-3 text-center">
         <img
@@ -83,7 +86,14 @@ function About() {
             {text[language].desc}
           </p>
           <br />
-          <a href={language === "es" ? "/David_Orozco_cv_es.pdf" : "/David_Orozco_cv_en.pdf"} download="David_Orozco_cv.pdf">
+          <a
+            href={
+              language === "es"
+                ? "/David_Orozco_cv_es.pdf"
+                : "/David_Orozco_cv_en.pdf"
+            }
+            download="David_Orozco_cv.pdf"
+          >
             <button className="bg-white text-blue-900 font-semibold cursor-pointer hover:bg-gray-200 rounded-2xl px-4 py-2 transition-all duration-300 shadow-md">
               {text[language].button_cv}
             </button>
