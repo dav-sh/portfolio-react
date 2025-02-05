@@ -9,6 +9,7 @@ function Contact() {
       title: "Get in Touch",
       name: "Your Name",
       email: `Your Email`,
+      subject: "Subject",
       message: "Your Message",
       button_send: "Send",
     },
@@ -16,15 +17,17 @@ function Contact() {
       title: "Contáctame",
       name: "Tu Nombre",
       email: "Tu Correo Electrónico",
+      subject: "Asunto",
       message: "Tu Mensaje",
       button_send: "Enviar",
     },
   };
 
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
     message: "",
+    subject: "",
+    name: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -86,6 +89,21 @@ function Contact() {
             />
             {errors.email && (
               <p className="text-red-500 text-sm">{errors.email}</p>
+            )}
+          </div>
+          <div>
+            <label className="block text-sm font-semibold text-gray-700">
+              {text[language].subject}
+            </label>
+            <input
+              type="text"
+              name="subject"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={formData.subject}
+              onChange={handleChange}
+            />
+            {errors.subject && (
+              <p className="text-red-500 text-sm">{errors.subject}</p>
             )}
           </div>
           <div>
