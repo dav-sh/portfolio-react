@@ -21,7 +21,7 @@ function Projects() {
       </h2>
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => {
-          console.log(project.title[language]);
+          // console.log(project.title[language]);
           return (
             <ProjectCard
               key={index}

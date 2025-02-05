@@ -29,7 +29,7 @@ function Nav() {
             language === "es" ? "space-x-8" : "space-x-15"
           } text-2xl`}
         >
-          {console.log({ language })}
+          {/* {console.log({ language })} */}
           {text[language].nav.map((item, index) => (
             <li key={index} className="text-white hover:text-amber-300">
               {/* {console.log(text.en.nav[index])} */}
