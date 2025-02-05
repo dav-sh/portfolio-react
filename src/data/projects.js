@@ -1,6 +1,8 @@
-import api_node from '../assets/img/projects/api_node.png'
-import django from '../assets/img/projects/django.png'
-import task_app from '../assets/img/projects/task_app.png'
+import api_node from "../assets/img/projects/api_node.png";
+import django from "../assets/img/projects/django.png";
+import task_app from "../assets/img/projects/task_app.png";
+import express_api from "../assets/img/projects/express_api.png";
+import portfolio from "../assets/img/projects/portfolio.png";
 export const projects = [
   {
     img: api_node,
@@ -18,8 +20,8 @@ export const projects = [
   {
     img: task_app,
     title: {
-      en: "React List App",
-      es: "Aplicación de Lista en React",
+      en: "React Task List",
+      es: "Lista de Tareas en React",
     },
     desc: {
       en: "A simple task list app where you can add and remove tasks. Built with React, no database used for now. It's a straightforward project for learning React fundamentals.",
@@ -28,7 +30,7 @@ export const projects = [
     link: "https://github.com/dav-sh/react-list-app",
   },
   {
-    img: "https://images.dog.ceo/breeds/spitz-indian/Indian_Spitz.jpg",
+    img: express_api,
     title: {
       en: "API in Node.js",
       es: "API en Node.js",
@@ -52,19 +54,7 @@ export const projects = [
     link: "https://github.com/dav-sh/projectWeb-django",
   },
   {
-    img: "https://images.dog.ceo/breeds/spitz-indian/Indian_Spitz.jpg",
-    title: {
-      en: "Checkers Game in Java",
-      es: "Juego de Damas Chinas en Java",
-    },
-    desc: {
-      en: "Built a simple console-based Checkers game in Java. It implements the game logic and allows players to make moves on the board. Although still a work in progress, it was a solid exercise in object-oriented programming and Java.",
-      es: "Construí un juego de Damas Chinas simple basado en consola usando Java. Implementa la lógica del juego y permite a los jugadores realizar movimientos en el tablero. Aunque aún está en progreso, fue un buen ejercicio de programación orientada a objetos y Java.",
-    },
-    link: "https://github.com/dav-sh/Tablero",
-  },
-  {
-    img: "https://images.dog.ceo/breeds/spitz-indian/Indian_Spitz.jpg",
+    img: portfolio,
     title: {
       en: "My Portfolio",
       es: "Mi Portafolio",
@@ -74,5 +64,5 @@ export const projects = [
       es: "Construí mi portafolio personal usando React, Tailwind CSS, Node.js, Express y SMTP para la funcionalidad del formulario de contacto. Incluye proyectos tanto de frontend como de backend, reflejando mi enfoque de desarrollo full-stack.",
     },
     link: "https://github.com/dav-sh/portfolio-react",
-  } ,
+  },
 ];

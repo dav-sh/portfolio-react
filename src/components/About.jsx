@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useLanguage } from "../context/Language";
 import {socialMedia} from '../data/socialLinks'
+import me from '../assets/img/me.png'
 function About() {
   const { language } = useLanguage();
 
@@ -32,7 +33,7 @@ function About() {
       {/* Sección de la imagen y enlaces */}
       <div className="grid gap-3 text-center">
         <img
-          src="https://images.dog.ceo/breeds/hound-english/n02089973_2345.jpg"
+          src={me}
           alt="Dog"
           className="rounded-full w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 mx-auto border-4 border-white shadow-lg"
         />
