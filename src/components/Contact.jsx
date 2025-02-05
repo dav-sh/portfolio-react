@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLanguage } from "../context/Language";
-
+const apiUrl = import.meta.env.VITE_API_URL;
 function Contact() {
   const {language} = useLanguage();
 
@@ -41,7 +41,7 @@ function Contact() {
     e.preventDefault();
     if (!validate()) return;
 
-    fetch("https://my_api.com/contact", {
+    fetch(`${apiUrl}/api/email/send`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
