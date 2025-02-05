@@ -1,6 +1,9 @@
+import api_node from '../assets/img/projects/api_node.png'
+import django from '../assets/img/projects/django.png'
+import task_app from '../assets/img/projects/task_app.png'
 export const projects = [
   {
-    img: "https://images.dog.ceo/breeds/spitz-indian/Indian_Spitz.jpg",
+    img: api_node,
     title: {
       en: "API with Node.js and JWT",
       es: "API con Node.js y JWT",
@@ -13,7 +16,7 @@ export const projects = [
   },
 
   {
-    img: "https://images.dog.ceo/breeds/spitz-indian/Indian_Spitz.jpg",
+    img: task_app,
     title: {
       en: "React List App",
       es: "Aplicación de Lista en React",
@@ -22,7 +25,7 @@ export const projects = [
       en: "A simple task list app where you can add and remove tasks. Built with React, no database used for now. It's a straightforward project for learning React fundamentals.",
       es: "Una aplicación simple de lista de tareas donde puedes agregar y eliminar tareas. Construida con React, sin base de datos por ahora. Es un proyecto sencillo para aprender los fundamentos de React.",
     },
-    link: "https://github.com/yourusername/react-list-app",
+    link: "https://github.com/dav-sh/react-list-app",
   },
   {
     img: "https://images.dog.ceo/breeds/spitz-indian/Indian_Spitz.jpg",
@@ -34,10 +37,10 @@ export const projects = [
       en: "A basic API built with Express and Node.js that performs CRUD operations. This is just an example API and doesn't connect to a database, but it could be extended with a simple database in the future.",
       es: "Una API básica construida con Express y Node.js que realiza operaciones CRUD. Este es solo un ejemplo de API y no se conecta a una base de datos, aunque podría ampliarse con una base de datos simple en el futuro.",
     },
-    link: "https://github.com/yourusername/express-api-example",
+    link: "https://github.com/dav-sh/Ejemplo-api-node-express",
   },
   {
-    img: "https://images.dog.ceo/breeds/spitz-indian/Indian_Spitz.jpg",
+    img: django,
     title: {
       en: "Django Projects",
       es: "Proyectos en Django",
@@ -70,6 +73,6 @@ export const projects = [
       en: "I built my personal portfolio using React, Tailwind CSS, Node.js, Express, and SMTP for the contact form email functionality. It showcases both front-end and back-end projects, reflecting my full-stack development approach.",
       es: "Construí mi portafolio personal usando React, Tailwind CSS, Node.js, Express y SMTP para la funcionalidad del formulario de contacto. Incluye proyectos tanto de frontend como de backend, reflejando mi enfoque de desarrollo full-stack.",
     },
-    link: "https://github.com/yourusername/my-portfolio",
+    link: "https://github.com/dav-sh/portfolio-react",
   } ,
 ];
